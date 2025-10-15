@@ -1,0 +1,687 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  color: #000000;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+.footer{
+    padding:1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+font-family: crayonette-djr, sans-serif;
+font-weight: 400;
+font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color:white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ed4965;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.page-header {
+  
+  margin: 2rem auto;
+  position: relative;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Back button in top-left */
+.back-button {
+  position:relative;
+ 
+}
+
+.content {
+  padding: 2rem;
+}
+.content-title{
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+.content-date{
+  padding-left: 4rem;
+}
+
+
+h1 {
+  color: #ed4965;
+}
+
+button,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #ed4965;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Portfolio Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align:left;
+  border: 1px solid #ddd;
+}
+
+/* Hero Section */
+.hero {
+  background: url("index_assets/ginger_.png") repeat; /* Replace with your image */
+  background-size: 10%;
+  background-position: ;
+  background-color: #ed4965;
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay BEHIND text */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(237, 77, 101, 0.9); /* dark overlay */
+  z-index: 0; /* overlay behind text */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* text stays above overlay */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+  color:black;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.cta-btn {
+  background: #000000;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin: 0.8rem;
+}
+
+.cta-btn:hover {
+  background: #333333;
+  
+}
+/* Updates Section */
+/* Updates Section - Larger Cards */
+.updates {
+  padding:  3rem 2rem 6rem 2rem; /* more breathing room */
+
+  text-align: center;
+}
+.proxima-nova{
+  width:fit-content;
+}
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem; /* more spacing between cards */
+  max-width: 1400px; /* wider grid */
+  margin: 0 auto;
+}
+
+.update-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.update-card img {
+/* bigger image */
+}
+.proxima-nova{
+  height: 30rem;
+}
+.apparmor{
+  height: 30rem;
+}
+.pride{
+  height: 30rem;
+}
+.update-card h3 {
+  color: #ed4965;
+  font-size: 1.5rem; /* bigger title */
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.update-card p {
+  padding: 0 1.5rem 2rem;
+  font-size: 1.1rem; /* larger paragraph */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.update-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .updates-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .update-card img {
+    height: 250px; /* shrink slightly for small screens */
+  }
+}
+
+/* Portfolio Navigation */
+
+
+.portfolio-content {
+  padding: 2rem 2rem;
+  text-align: center;
+
+}
+
+.portfolio-title {
+
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+.portfolio-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three cards per row */
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s, box-shadow 0.3s;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(237, 73, 101, 0.9); /* pink overlay with opacity */
+  z-index: 1;
+}
+
+.portfolio-content {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.portfolio-card p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Hover effect */
+.portfolio-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition-duration: .5s;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  background: rgba(237, 73, 101, 0.6); /* slightly darker on hover */
+}
+
+/* Assign background images */
+.portfolio-link.ux-work .portfolio-card {
+  background-image: url("index_assets/Screenshot\ 2025-09-12\ at\ 2.11.47\ PM.png");
+  background-position: 0rem -2rem;
+}
+
+.portfolio-link.graphic-design .portfolio-card {
+  background-image: url("index_assets/hamburgefonstiv.jpg");
+  background-position: -40rem -20rem;
+  background-size: 400%;
+}
+
+.portfolio-link.data-science .portfolio-card {
+  background-image: url("index_assets/taylor_graph.png");
+  background-position: -3rem 0rem;
+  background-size: 180%;
+}
+
+.portfolio-link.theater .portfolio-card {
+  background-image: url("index_assets/dow_ayli.JPG");
+}
+
+.portfolio-link.web-mobile-dev .portfolio-card {
+  background-image: url("index_assets/grace_hopper.png");
+}
+
+.portfolio-link.writing .portfolio-card {
+  background-image: url("index_assets/dow_thrift_img.png");
+}
+
+.resume-header{
+  margin-top:2rem;
+}
+.resume-pdf{
+  display: grid;
+  justify-self: center;
+
+}
+.resume-content{
+  display:grid;
+  justify-items: center;
+
+}
+.ux-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.nav-buttons{
+  display:flex;
+  justify-content: space-between;
+}
+
+.project {
+  width: 100%;
+  border-radius: 32px;
+  min-height: 80vh;  /* section height */
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* neutral bg */
+  margin-bottom: 2rem;
+}
+
+.project-text {
+  max-width: 1000px;
+  margin: 0 0 2rem 0;  /* remove auto-centering */
+  text-align: left;    /* align text left */
+}
+
+.current-project{
+  font-size:3rem;
+  color:white;
+  background-color: black;
+}
+.current-project p{
+  color:white;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 1rem;
+  margin: 0 0 2rem 0;  /* remove auto-centering */
+  text-align: left;    /* align text left */
+}
+
+
+.project-description {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-images {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+.project-item img:hover{
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition-duration: .8s;
+}
+.link{
+  color:#ed4965;
+  text-decoration:underline;
+  
+
+}
+.link:visited{
+  color:black;
+}
+
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 30%;
+}
+
+.project-item img {
+  /* Set a fixed height and width for consistent sizing */
+  width: 400px;
+  height: 250px; /* Use a fixed height that works for your design */
+
+  /* The key property to make images the same size */
+  object-fit: cover;
+  
+  /* Center the image within its container to control the cropped area */
+  object-position: center;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-item .caption {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* New CSS for the specific item names/captions */
+.gallery-item figcaption {
+    padding: 1em;
+    font-size: 1em;
+    text-align: center;
+    justify-self: center;
+    color: #555;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .portfolio-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .portfolio-nav {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-nav {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}
+.site-footer {
+  display: flex;
+  justify-content: center;   /* puts them side by side instead of spread apart */
+  align-items: flex-start;
+  gap: 4rem;                     /* controls space between left and right blocks */
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+
+.footer-left {
+  max-width: 45%;
+
+}
+
+.footer-logo {
+  height: 60px;/* placeholder background */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: crayonette-djr, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color:white;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #ed4965;
+  font-weight: bold;
+  margin-top: .2rem;
+}
+
+.footer-right h3 {
+  margin-bottom: 0.5rem;
+  color: #ed4965;
+}
+
+.footer-right p {
+  margin: 0.3rem 0;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #ed4965;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left, .footer-right {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Responsive Hero */
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+    .hero h1 {
+    font-size: 2rem;
+    color:black; 
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .hero-h1{
+    color:black;
+  }
+
+}
+
