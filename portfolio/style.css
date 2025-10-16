@@ -486,12 +486,14 @@ button:hover {
   flex-direction: column;
   min-width: 250px;
   max-width: 30%;
+
 }
 
 .project-item img {
   /* Set a fixed height and width for consistent sizing */
   width: 400px;
-  height: 250px; /* Use a fixed height that works for your design */
+  max-height: 250px;
+  min-height: 250px; /* Use a fixed height that works for your design */
 
   /* The key property to make images the same size */
   object-fit: cover;
@@ -683,5 +685,104 @@ button:hover {
     color:black;
   }
 
+}
+
+
+/* =========================================
+   RESPONSIVE LAYOUT + IMAGE SPACING FIX
+   ========================================= */
+
+/* --- Base Project Image Grid --- */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;           /* allows items to move to a new row naturally */
+  justify-content: center;   /* centers the whole grid */
+  align-items: flex-start;
+  gap: 20px;                 /* consistent space between items */
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+/* Each project item */
+.project-item {
+  flex: 1 1 300px;           /* each takes ~300px but can shrink/grow */
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image styling */
+.project-item img {
+  width: 100%;               /* image fills its container */
+  height: auto;              /* preserve aspect ratio */
+  display: block;            /* removes unwanted inline space */
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Caption styling */
+.caption {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* --- Tablet Breakpoint (900px and below) --- */
+@media (max-width: 900px) {
+  .project-images {
+    gap: 16px;               /* slightly smaller gap on tablets */
+    padding: 0 1rem;
+  }
+
+  .project-item {
+    flex: 1 1 45%;           /* about two items per row */
+  }
+}
+
+/* --- Mobile Breakpoint (600px and below) --- */
+@media (max-width: 600px) {
+  .project-images {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center each image */
+    gap: 24px;               /* generous vertical spacing */
+    padding: 0 1rem;
+  }
+
+  .project-item {
+    width: 100%;
+    max-width: 450px;        /* prevents extra-wide images on large phones */
+  }
+
+  .project-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;     /* ensures full visibility */
+  }
+
+  .caption {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Optional: Very Small Screens (400px and below) --- */
+@media (max-width: 400px) {
+  .project-images {
+    gap: 20px;
+  }
+
+  .project-item {
+    max-width: 100%;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
 }
 
